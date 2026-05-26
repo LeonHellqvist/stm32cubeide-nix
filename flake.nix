@@ -20,15 +20,15 @@
           config.allowUnfree = true;
         };
 
-        version = "2.0.0";
-        buildNumber = "26820";
-        tarballName = "st-stm32cubeide_${version}_${buildNumber}_20251114_1348_amd64.tar.gz";
+        version = "2.1.0";
+        buildNumber = "27993";
+        tarballName = "st-stm32cubeide_${version}_${buildNumber}_20260219_1630_amd64.tar.gz";
 
         # The main IDE tarball - must be obtained from STMicroelectronics
         # Download from: https://www.st.com/en/development-tools/stm32cubeide.html
         mainTarball = pkgs.requireFile {
           name = tarballName;
-          sha256 = "2aca6c65d1c85e49f4a4ac35c9cae2c1d406d7af86a9f446a41d7baffe7f8597";
+          sha256 = "6e84809be9a4930a13a06a6d13de0ab544d0a56a7c582ed84a9779e31767afa2";
           message = ''
             STM32CubeIDE ${version} tarball not found in the Nix store.
 
@@ -37,7 +37,7 @@
 
               https://www.st.com/en/development-tools/stm32cubeide.html
 
-            1. Download the Linux installer: en.st-stm32cubeide_${version}_${buildNumber}_20251114_1348_amd64.sh.zip
+            1. Download the Linux installer: en.st-stm32cubeide_${version}_${buildNumber}_20260219_1630_amd64.sh.zip
             2. Unzip it to get the installer directory
             3. Add the tarball to the Nix store:
 
@@ -63,10 +63,10 @@
             1. Download the Linux installer from:
                https://www.st.com/en/development-tools/stm32cubeide.html
 
-            2. Unzip en.st-stm32cubeide_${version}_${buildNumber}_20251114_1348_amd64.sh.zip
+            2. Unzip en.st-stm32cubeide_${version}_${buildNumber}_20260219_1630_amd64.sh.zip
 
             3. The .sh installer is a self-extracting archive. Extract it:
-               bash st-stm32cubeide_${version}_${buildNumber}_20251114_1348_amd64.sh --noexec --target /tmp/stm32cubeide-extract
+               bash st-stm32cubeide_${version}_${buildNumber}_20260219_1630_amd64.sh --noexec --target /tmp/stm32cubeide-extract
 
             4. Find the stlink-server installer in the extracted directory:
                /tmp/stm32cubeide-extract/${stlinkServerInstallerName}
